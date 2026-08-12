@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: #333;
+}
+
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 650px;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+
+    animation: cardAppear 0.7s ease;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+
+    background: #eef1ff;
+
+    border-radius: 50%;
+}
+
+.header h1 {
+    font-size: 30px;
+
+    color: #252525;
+
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+/* Form */
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #333;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    font-size: 15px;
+
+    color: #333;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #667eea;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(102, 126, 234, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+/* Button */
+
+.predict-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 15px;
+
+    margin-top: 5px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.predict-btn span {
+    margin-left: 8px;
+
+    font-size: 20px;
+}
+
+.predict-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(102, 126, 234, 0.35);
+}
+
+.predict-btn:active {
+    transform: translateY(0);
+}
+
+/* Result */
+
+.result-box {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #f1f4ff;
+
+    border-left: 5px solid #667eea;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    animation: resultAppear 0.5s ease;
+}
+
+@keyframes resultAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.result-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 25px;
+}
+
+.result-box p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.result-box h2 {
+    color: #4b55a1;
+
+    font-size: 27px;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eee;
+}
+
+.footer p {
+    color: #999;
+
+    font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .page-container {
+        padding: 20px 12px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+
+        border-radius: 15px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .form-group select,
+    .form-group input {
+        padding: 13px;
+    }
+
+}
